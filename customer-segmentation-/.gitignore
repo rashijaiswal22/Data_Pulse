@@ -1,0 +1,25 @@
+# Python automatic cache folders
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node.js frontend dependencies
+node_modules/
+dist/
+build/
+
+# IDE files (VS Code settings)
+.vscode/
+.DS_Store
+
+# Virtual Environments (Agar aapne banaya ho)
+env/
+venv/
+.env
+
+# Large Machine Learning Files (Very Important)
+*.pkl
+*.csv
+*.ipynb_checkpoints/
+*.ipynb
