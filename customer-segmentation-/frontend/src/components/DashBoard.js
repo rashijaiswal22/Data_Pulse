@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000';
 const Dashboard = () => {
   // --- States ---
   const [analytics, setAnalytics] = useState(null);
@@ -41,7 +42,7 @@ const Dashboard = () => {
 
   // --- Fetch Analytics Data on Load ---
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/analytics')
+    fetch(`${API_BASE_URL}/api/analytics`)
       .then((res) => res.json())
       .then((data) => {
         setAnalytics(data);
@@ -64,13 +65,12 @@ const Dashboard = () => {
       return updated;
     });
   };
-
   // --- Submit Single Prediction ---
   const handlePredict = async (e) => {
     e.preventDefault();
     setPredictLoading(true);
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/predict', {
+      const response = await fetch(`${API_BASE_URL}/api/predict`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -314,7 +314,7 @@ const Dashboard = () => {
                 <div className="p-3 rounded border" style={{ backgroundColor: '#fffde7', borderColor: '#fff59d' }}>
                   <h6 className="fw-bold text-warning-heading text-dark text-uppercase mb-2">💡 Recommended Retention Strategy:</h6>
                   <ul className="mb-0 ps-3 text-dark">
-                    {prediction.recommendations.map((rec, i) => <li key={i} className="mb-1">{rec}</li>)}
+                    {prediction.recommendations?.map((rec, i) => <li key={i} className="mb-1">{rec}</li>)}
                   </ul>
                 </div>
               </div>
