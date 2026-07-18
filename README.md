@@ -1,4 +1,4 @@
-# DataPulse: Customer Segmentation & Predictive Churn Dashboard 📊🚀
+# DataPulse - Customer Segmentation & Predictive Churn Dashboard 📊🚀
 
 DataPulse is an end-to-end machine learning web application that predicts customer churn and segments customers based on behavioral patterns. The application combines a React.js frontend, FastAPI backend, and Scikit-learn models to provide real-time predictions, business analytics, and customer insights.
 The predictive core utilizes **Scikit-Learn** models to classify customer churn risk and group customers into behavioral segments using the standard Telco Customer Churn dataset (7,043+ records).
