@@ -10,7 +10,7 @@ function App() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow">
         <div className="container justify-content-center">
           <h2 className="text-white fw-bold text-center m-3">
-            📈 DataPulse - Multi-Model Customer Segmentation & Predictive Churn Dashboard
+            📈 DataPulse - Customer Segmentation & Predictive Churn Dashboard 
           </h2>          
         </div>
       </nav>
