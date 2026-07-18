@@ -3,14 +3,20 @@
 DataPulse is an end-to-end machine learning web application that predicts customer churn and segments customers based on behavioral patterns. The application combines a React.js frontend, FastAPI backend, and Scikit-learn models to provide real-time predictions, business analytics, and customer insights.
 The predictive core utilizes **Scikit-Learn** models to classify customer churn risk and group customers into behavioral segments using the standard Telco Customer Churn dataset (7,043+ records).
 
----
 ## 🌐 Live Demo
 
 **Frontend:** https://datapulse-frontend-v1.onrender.com
 
 **Backend API:** https://datapulse-backend-0veu.onrender.com
 
----
+
+## 📸 Screenshots
+
+![Dashboard](churn_dashboard.png)
+
+![Prediction](churn_predict.png)
+
+![Analytics](churn_segment.png)
 ## 🌟 Key Features
 
 * **Interactive KPI Dashboard:** Real-time visualization of key performance indicators (Accuracy, Precision, Recall, F1-Score).
@@ -19,7 +25,6 @@ The predictive core utilizes **Scikit-Learn** models to classify customer churn 
 * **Sentiment & Retention Insights:** Simulates customer sentiment and maps out automated actionable business retention strategies based on churn risk.
 * **Feature Importance & Visualization:** Visual distribution graphs highlighting critical analytical weights (Monthly Charges, Total Charges, Tenure).
 
----
 
 ## 🛠️ Tech Stack
 
@@ -44,7 +49,7 @@ The predictive core utilizes **Scikit-Learn** models to classify customer churn 
 * **Registry:** Docker Hub
 * **Hosting Platform:** Render 
 
----
+
 ## 🏗️ System Architecture (Data Flow)
 
 ```
@@ -68,7 +73,7 @@ JSON Response
        ▼
 React Dashboard
 ```
----
+
 ## 📈 Model Performance 
 
 * **Dataset Size:** 7,043 Customer Records (Telco Customer Churn)
@@ -77,15 +82,12 @@ React Dashboard
 * **Model Precision:** `76.5%`
 * **Model Recall:** `71.2%`
 
----
 
 ## 🔌 API Endpoints
 
 ### 1. Get Analytics Summary
 **Endpoint:** `GET /api/analytics`
 **Description:** Returns dashboard analytics, KPI metrics, and customer insights for visualization.
-
----
 
 ### 2. Predict Customer Churn
 **Endpoint:** `POST /api/predict`
